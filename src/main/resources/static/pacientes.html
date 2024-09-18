@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="preload" href="./css/pacientes.css" as="style" onload="this.rel='stylesheet'">
+    <title>Pacientes</title>
+</head>
+<body>
+<main>
+    <header class="header">
+        <h1>Clínica Sonrisa Sana</h1>
+        <nav class="main-modules">
+          <ul>
+            <li><a href="./pacientes.html">Pacientes</a></li>
+            <li><a href="./odontologos.html">Odontologos</a></li>
+            <li><a href="./turnos.html">Turnos</a></li>
+            <li><a href="./index.html">Inicio</a></li>
+          </ul>
+        </nav>
+      </header>
+
+        <section class="find-agree">
+            <h2>Bienvenido a Clinica Sonrisa</h2>
+            <p>Aca podras administrar los pacientes, puedes ingresar 
+                , editar y eliminar un paciente dando click en el boton correspondiente</p>
+                
+            <div class="btn-container">
+    
+                <form action="" id="form-busqueda">
+                    <input
+                      id="idBusqueda"
+                      placeholder="ID a buscar, ejemplo: 1"
+                      type="text" required
+                    />
+                    <input  id="find-Id" type="submit" value="Buscar" />
+                  </form>
+                  
+                  <button class="agree-btn">Agregar Nuevo Paciente</button>
+
+            </div>
+
+            <h3 id="message-update" class="hidden">Paciente Actualizado correctamente</h3>
+
+            
+
+        </section >
+
+      <!-- formulario agregar o editar -->
+        <section id="form-hidden" class="form-hidden">
+            <div class="chose-form">
+                <h2 class="edit-user-name"></h2>
+                <p class="textP"> </p>
+            </div>
+
+            <form id="pacientForm">
+
+                <div class="id-user">
+                    <input type="text" id="id" name="id" >
+                </div>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+                <div>
+                    <label for="dni">DNI:</label>
+                    <input type="number" id="dni" name="dni" required>
+                </div>
+                <p for="domicilio">Datos Domicilio</p>
+                <div>
+                    <label for="calle">Calle:</label>
+                    <input type="text" id="calle" name="calle" required>
+                </div>
+                <div>
+                    <label for="numero">Numero:</label>
+                    <input type="number" id="numero" name="numero" required>
+                </div>
+                <div>
+                    <label for="localidad">Localidad:</label>
+                    <input type="text" id="localidad" name="localidad" required>
+                </div>
+                <div>
+                    <label for="provincia">Provincia:</label>
+                    <input type="text" id="provincia" name="provincia" required>
+                </div>
+
+                <button id="guardar" type="submit">Guardar</button>
+                <div class="errors"></div>
+            </form>
+        </section>
+        
+        <!-- listado pacientes -->
+        <section  class="table-container">
+        <table class="table-pacients">
+            <thead >
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Dni</th>
+                    <th>Domicilio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody class="tbody-pacients">                            
+                <td class="empty-list">
+                lista vacia
+                </td>
+
+            </tbody>        
+        </table>
+        
+
+        </section>
+        <button id="btn-back" class="hidden">Volver al listado de pacientes</button>
+
+</main>
+<script src="./js/pacientes.js"></script>
+</body>
+</html>

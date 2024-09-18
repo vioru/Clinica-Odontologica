@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="../css/style.css" rel="stylesheet"/>
+    <title>Odontólogos</title>
+</head>
+<body>
+<header class="header">
+    <h1>Clínica la sanación</h1>
+    <nav class="main-modules">
+        <ul>
+            <li><a href="./pacientes.html">Pacientes</a></li>
+            <li><a href="./odontologos.html">Odontologos</a></li>
+            <li><a href="./turnos.html">Turnos</a></li>
+            <li><a href="./contactanos.html">Contáctanos</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h2>Listado de Odontologos</h2>
+    <section class="listado">
+        <form action="">
+            <label for="busqueda">Id</label>
+            <input
+                    id="busqueda"
+                    placeholder="Ingrese ID a buscar, ejemplo: 1"
+                    type="text"
+            />
+            <input type="submit" value="Buscar"/>
+        </form>
+        <div class="nuevo">
+            <button>Registrar Nuevo</button>
+        </div>
+
+        <div class="cabeceras">
+            <div>Id</div>
+            <div>Matrícula</div>
+            <div>Nombre</div>
+            <div>Apellido</div>
+        </div>
+        <ul class="odontologos">
+            <li class="odontologo">
+                <div class="datos">
+                    <div class="id">1</div>
+                    <div class="matricula">odont-h2-001</div>
+                    <div class="nombre">Dave</div>
+                    <div class="apellido">Kauffman</div>
+                    <div class="controls">
+                        <i>Edit</i>
+                        <i>Sup</i>
+                    </div>
+                </div>
+            </li>
+            <li class="odontologo">
+                <div class="datos">
+                    <div class="id">2</div>
+                    <div class="matricula">odont-h2-001</div>
+                    <div class="nombre">Dave</div>
+                    <div class="apellido">Kauffman</div>
+                    <div class="controls">
+                        <i>Edit</i>
+                        <i>Sup</i>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <table class="tabla-datos" id="tabla-datos">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Matricula</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </tr>
+        </thead>
+        <tbody id="odontologoTableBody">
+        <tr>
+            <td>01</td>
+            <td>odont-h2-001</td>
+            <td>Bruce</td>
+            <td>Sprince</td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+<script src="./script.js"></script>
+</body>
+</html>

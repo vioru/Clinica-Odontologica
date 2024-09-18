@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="./css/odontologos.css" rel="stylesheet" />
+    <title>Odontólogos</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Clínica Sonrisa</h1>
+      <nav class="main-modules">
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./pacientes.html">Pacientes</a></li>
+          <li><a href="./odontologos.html">Odontologos</a></li>
+          <li><a href="./turnos.html">Turnos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="listado">
+        <div class="tareas">
+          <div><h3>Gestión Odontólogos</h3></div>
+          <div class="controles">
+            <input type="button" value="Buscar" name="btn-buscar" />
+            <input type="button" value="Nuevo" name="btn-nuevo" />
+            <input type="button" value="Listar" name="btn-listar" />
+          </div>
+        </div>
+        <form action="" class="busqueda oculto" id="form-busqueda">
+          <input id="busqueda" placeholder="ID a buscar, ejemplo: 1" type="number" />
+          <input type="submit" name="buscar" value="Buscar" />
+        </form>
+
+        <form action="" class="form-odontologo oculto" id="form-odontologo">
+          <label
+            >Matricula:
+            <input name="matricula" id="matricula" placeholder="Ingrese matrícula" required type="text" />
+          </label>
+          <label
+            >Nombre:
+            <input name="nombre" id="nombre" placeholder="Ingrese nombre" required type="text" />
+          </label>
+          <label
+            >Apellido: <input name="apellido" id="apellido" placeholder="Ingrese apellido" required type="text"
+          /></label>
+          <input id="guardar" type="submit" value="Guardar" />
+          <input type="button" name="actualizar" class="actualizar oculto" id="actualizar" value="Actualizar" />
+        </form>
+        <div class="resultado-peticion">
+          <p id="par-resultado"></p>
+        </div>
+      </section>
+      <section class="resultados">
+        <h3>Listado Odontólogos</h3>
+        <table id="odontologosTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Matrícula</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Los datos se insertarán aquí -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <!-- <script src="./js/script.js"></script> -->
+    <script src="./js/listaOdontologos.js"></script>
+  </body>
+</html>

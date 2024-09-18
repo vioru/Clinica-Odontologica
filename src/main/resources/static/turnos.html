@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="./css/turnos.css" as="style" onload="this.rel='stylesheet'">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Clínica Sonrisa Sana</h1>
+        <nav class="main-modules">
+          <ul>
+            <li><a href="./pacientes.html">Pacientes</a></li>
+            <li><a href="./odontologos.html">Odontologos</a></li>
+            <li><a href="./turnos.html">Turnos</a></li>
+            <li><a href="./index.html">Inicio</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Bienvenido a Clinica Sonrisa</h2>
+            <p>Aca podras separar turnos y ver los proximos turnos de la clinica</p>
+        </section>
+        <section >
+            <div id="message-shift" class="hidden">
+
+            </div>
+
+        </section>
+
+        <section id="shift-list" class="hidden">
+            <button id="btn-back" class="hidden">Volver al listado para crear un nuevo turno</button>
+            <!-- <form id="search-form">
+                <label for="search-id">Buscar Turno por ID:</label>
+                <input type="text" id="search-id" name="search-id" required>
+                <button type="submit">Buscar</button>
+            </form> -->
+            <div class="shift-container">
+                <h3>Turnos  </h3>
+            <table class="table-shift">
+                <thead id="thead" >
+                    <tr>
+                        <th>Turnos</th>
+                    </tr>
+
+                </thead>
+                <tbody class="tbody-shift">
+                        <td class="empty-list">
+                            lista vacia
+                        </td>       
+                </tbody>        
+            </table>
+           
+
+            </div>
+            
+            <!-- <button id="delete-shift" onclick="clearShiftList()">Eliminar Turnos</button> -->
+            
+
+        </section >
+
+        <section id="new-shift">
+
+        </section>
+
+    
+        <section id="table-create-shift" >           
+            <form action="" id="form-created"  >
+                <h3>Para separar tu turno elige un odontólogo y  un paciente.  </h3>
+                <div class="tables-container">
+                    
+                    <table class="table-dentist">
+                        <thead >
+                            <tr>
+                                <th>Listado de Odontologos</th>
+                            </tr>
+        
+                            <tr class="encabezado">
+                                
+                            </tr>
+                        </thead>
+                        <tbody class="tbody-dentist">
+                                <td class="empty-list">
+                                    lista vacia
+                                </td>
+                            
+                        </tbody>        
+                    </table>
+        
+                    <table class="table-pacient">
+                        <thead >
+                            <tr>
+                                <th>Listado de Pacientes</th>
+                            </tr>
+                            <tr class="encabezado">
+                                
+                            </tr>
+                        </thead>
+                        <tbody class="tbody-pacient">
+                            <td class="empty-list">
+                                lista vacia
+                            </td>
+                        
+                        </tbody>        
+                    </table>
+                </div>
+                <div class="container-submit">
+                    <button class="submit" type="submit">Guardar Turno</button>
+                </div>
+                
+    
+            </form>             
+        </section>
+
+    </main>
+    <script src="./js/turnos.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+
+@import url("./mainStyles.css");
+
+.chose-form{
+    h2 ,p {
+        margin: 10px;
+    }
+    
+}
+.btn-container {
+    display: flex;
+    justify-content: space-around; 
+    width: 80%;
+
+    .agree-btn {
+        padding: 5px 25px;
+        margin: 10px 16px; 
+        border-radius: 15px;
+        color: var(--texto1);
+        background-color: var(--bg-form1);
+        text-decoration: none;
+        box-shadow: 0px 5px #0000003f;
+    }
+
+    #form-busqueda {
+        padding: 10px;
+        /* margin: 30px 16px; */
+    
+        #idBusqueda{
+            padding: 10px;
+            border-radius: 15px 0px 0px 15px;
+        }
+
+        #find-Id{
+            padding: 10px;
+            border-radius: 0px 15px 15px 0px;
+            background-color: var(--bg-form1);
+            color: var(--texto1);
+        }
+    }
+}
+
+.form-hidden ,.hidden ,#pacientForm.form-hidden {
+    display: none;
+}
+
+#pacientForm{
+
+    background-color: var(--bg-form1);
+    border-radius: 1rem;
+    color: var(--texto1);
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    margin: 2rem 0;
+
+   .id-user{
+    display: none;
+    }
+
+    input{
+        padding: 2px;
+        border-radius: 5px;
+        border: none;
+    }
+    #guardar {
+      align-self: center;
+      padding: 5px 25px;
+      border-radius: 15px;
+      border: none;
+      background-color: var(--bg-form2);
+      color: var(--texto1);
+      box-shadow: 0px 5px #0000003f;
+    }
+     p{ 
+        align-self: flex-start; 
+     }
+
+     .errors{
+        width: 80%;
+     }
+     .errors p{
+        background-color: rgba(231, 171, 161, 0.349);
+        color: rgb(219, 38, 38);
+        border-radius: 8px;
+        margin: 5px;
+        padding: 8px;
+        
+
+     }
+}
+
+.table-container{
+    max-height: 400px;
+    overflow-y: auto;
+    font-family: monospace;
+    color: black;
+    background-color: bisque;
+    border-radius: 0px 0px 25px 25px;
+    width: 80%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    box-sizing: border-box;
+    padding: 0;
+
+
+    .table-pacients {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse; /* Para eliminar los espacios entre celdas */
+    }
+
+    .table-pacients thead tr {
+        background-color: var(--bg-form1);
+        position: sticky;
+        /* top: -20px;
+        left: -80px; */
+        width: 100%; /* Asegura que el th cubra todo el ancho de la tabla */
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+        z-index: 10; /* Asegura que el encabezado esté siempre encima de los <td> */
+        padding: 8px; /* Ajustar padding si es necesario */
+        text-align: left; /* Alineación del texto en el encabezado */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    }
+
+    .table-pacients td {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        box-sizing: border-box;
+    }
+     /* .table-pacients {
+    font-family: monospace;
+    color: black;
+    background-color: bisque;
+    margin: 10px auto;
+    border-radius: 0px 0px 25px 25px;
+    border-collapse: collapse;
+    td {
+      text-align: center;
+    }
+    width: 80%;}
+
+    thead {
+
+
+        border-radius: 25px;
+    }
+
+    tr, td {
+        padding: 8px;
+    } */
+    th {
+        background-color:var(--bg-form1);
+        position: sticky;
+        top: 0;
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        padding: 8px; 
+        width: auto; 
+        box-sizing: border-box;
+    }
+
+
+    .table-pacients tr:hover td {
+        background-color: var(--hover-list); 
+    }
+    .table-pacients tbody tr:first-child td {
+        padding-top: 4%;
+
+    }
+
+    tbody .empty-list {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+
+.edit-btn, .delete-btn, #btn-back{
+    padding: 5px 20px;
+    border-radius: 15px ;
+    border: #0000003f;
+    box-shadow: 0px 5px #0000003f;
+    background-color: rgb(255, 214, 125);
+    margin: 5px;
+}
+
+.delete-btn{
+    background-color: rgb(255, 144, 125);
+}
+
+#btn-back{
+    margin: 20px;
+    background-color:var(--bg-form1);
+    color: white;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-around; 
+    flex-direction: row;
+
+
+    .agree-btn {
+        padding: 5px 25px;
+        margin: 10px 16px; 
+        border-radius: 15px;
+        color: var(--texto1);
+        background-color: var(--bg-form1);
+        text-decoration: none;
+        box-shadow: 0px 5px #0000003f;
+    }
+
+    #form-busqueda {
+        padding: 10px;
+        /* margin: 30px 16px; */
+    
+        #idBusqueda{
+            padding: 10px;
+            border-radius: 15px 0px 0px 15px;
+        }
+
+        #find-Id{
+            padding: 10px;
+            border-radius: 0px 15px 15px 0px;
+            background-color: var(--bg-form1);
+            color: var(--texto1);
+        }
+    }
+}
+@media only screen and (max-width : 901px) {
+    .btn-container {
+
+        align-items: center;
+        flex-direction: column;    
+
+    }
+
+    }

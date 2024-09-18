@@ -1,0 +1,182 @@
+@import url("./mainStyles.css");
+
+#form-created {
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    border-radius: 0 0 25px 25px;
+    padding-bottom: 25px;
+    max-height: 500px;
+    overflow-y: auto;
+    position: relative;
+    align-items: center;
+    font-family: monospace;
+}
+
+h3 {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    background-color: var(--bg-form1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.205);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.hidden, #form-created.hidden {
+    display: none;
+}
+
+thead tr {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-form1);
+}
+
+thead th, tbody td {
+    padding: 20px 10px;
+    margin: 2px 15px;
+}
+
+tbody tr {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.205);
+}
+
+tbody .empty-list {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.tables-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.table-dentist, .table-pacient, .table-shift {
+    border-radius: 0 0 25px 25px;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.table-dentist thead, .table-pacient thead, .table-shift thead {
+    position: sticky;
+    top: 40px;
+    z-index: 5;
+}
+
+.container-submit {
+    position: sticky;
+    bottom: 0;
+    background-color: bisque;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.submit {
+    width: 30%;
+    background-color: var(--bg-form1);
+    font-family: monospace;
+    font-weight: 600;
+    padding: 8px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0px 5px 12px 1px;
+}
+
+.shift-container {
+    background-color: bisque;
+    border-radius: 0 0 25px 25px;
+    overflow-y: auto;
+    max-height: 450px;
+    position: relative;
+    align-items: center;
+    font-family: monospace;
+}
+
+.table-shift thead tr {
+    justify-content: space-around;
+}
+
+.table-shift tbody tr {
+    justify-content: space-around;
+}
+
+.table-dentist tbody, .table-pacient tbody {
+    border-right: 2px solid rgba(0, 0, 0, 0.205);
+}
+
+
+#message-shift {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color:rgba(255, 228, 196, 0.445); 
+    width: 100%; 
+    padding:350px 200px;
+    border-radius: 10px; 
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+
+
+.message-table {
+    width: 100%;
+    font-family: monospace;
+    border-collapse: collapse;
+    background-color: bisque;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 25px 25px;
+    
+}
+
+.message-table thead th {
+    background-color: var(--bg-form1);
+    padding: 10px;
+}
+
+.message-table tbody td {
+    padding: 15px;
+    text-align: center;
+}
+
+.message-table tbody tr {
+    border-bottom: 0ch;
+}
+
+.message-table .shift-message {
+    color: black;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+}
+
+.edit-btn, .delete-btn, #btn-back{
+    padding: 5px 20px;
+    border-radius: 15px ;
+    border: #0000003f;
+    box-shadow: 0px 5px #0000003f;
+    background-color: rgb(255, 134, 125);
+    margin: 5px;
+}
+
+#btn-back{
+    margin: 20px;
+    background-color:var(--bg-form1);
+    font-family: monospace;
+    font-weight:600 ;
+}
